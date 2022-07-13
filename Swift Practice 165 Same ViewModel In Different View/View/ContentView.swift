@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var vm = IntViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Spacer()
+            FirstView(intVM: vm)
+            Spacer()
+            SecondView(intVM: vm)
+            Spacer()
+        }
     }
 }
 
@@ -19,3 +27,9 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+
+
+//BindingView(intVM:  vm)
